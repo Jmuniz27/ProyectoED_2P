@@ -1,4 +1,5 @@
 ec\edu\espol\proyectoed\p\App.class
+ec\edu\espol\proyectoed\p\controller\InicioController.class
+ec\edu\espol\proyectoed\p\controller\PrimaryController.class
 ec\edu\espol\proyectoed\p\SecondaryController.class
 module-info.class
-ec\edu\espol\proyectoed\p\PrimaryController.class
