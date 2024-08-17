@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="ec.edu.espol.proyectoed.p.controller.NoSolucionController">
+   <children>
+      <Text layoutX="83.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lástima :(" textAlignment="CENTER" wrappingWidth="433.9267578125">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="38.0" />
+         </font>
+      </Text>
+      <Text layoutX="72.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No se encontró el animal" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="38.0" />
+         </font>
+      </Text>
+      <Text layoutX="158.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Volver a intentarlo? :D" wrappingWidth="282.0888671875">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnRegresarInicio" layoutX="247.0" layoutY="333.0" mnemonicParsing="false" onAction="#regresarInicio" prefHeight="28.0" prefWidth="107.0" text="Inicio" />
+   </children>
+</AnchorPane>
