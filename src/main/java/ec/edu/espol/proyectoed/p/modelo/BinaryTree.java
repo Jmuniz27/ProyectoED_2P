@@ -7,10 +7,6 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.Stack;
 
-import javafx.scene.Node;
-
-import java.util.Map;
-
 public class BinaryTree<E extends Comparable<E>> {
     private NodeBinaryTree<E> root;
 
@@ -400,9 +396,32 @@ public class BinaryTree<E extends Comparable<E>> {
         }
         return true;
     }
-    public void crearArbol(List<String> preguntas, Map<String, List<String>> animales){
-        for(Map.Entry<String, List<String>> entry: animales.entrySet()){
-            
+    public void crearArbol(List<E> preguntas, Map<E, List<String>> animales){
+        for(Map.Entry<E, List<String>> entry: animales.entrySet()){
+            root = addNode(root, preguntas, entry.getKey(), entry.getValue(), 0);
+
         }
     } 
+    private NodeBinaryTree<E> addNode(NodeBinaryTree<E> nodo, List<E> preguntas, E contenido, List<String> respuestas, int indice){
+        if (indice == preguntas.size()){
+            return new NodeBinaryTree<>(contenido);
+        }
+        if (nodo == null){
+            nodo = new NodeBinaryTree<>(preguntas.get(indice));
+        }
+        if (respuestas.get(indice).equalsIgnoreCase("si")) {
+            if (nodo.getLeft() == null) {
+                nodo.setLeft(new BinaryTree<>());
+            }
+            NodeBinaryTree<E> leftRoot = addNode(nodo.getLeft().getRoot(), preguntas, contenido, respuestas, indice + 1);
+            nodo.getLeft().setRoot(leftRoot);
+        } else {
+            if (nodo.getRight() == null) {
+                nodo.setRight(new BinaryTree<>());
+            }
+            NodeBinaryTree<E> rightRoot = addNode(nodo.getRight().getRoot(), preguntas, contenido, respuestas, indice + 1);
+            nodo.getRight().setRoot(rightRoot);
+        }
+        return nodo;
+    }
 }

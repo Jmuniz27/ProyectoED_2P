@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import ec.edu.espol.proyectoed.p.modelo.BinaryTree;
+
 public class FileReaderUtil {
-
-    public static List<String> preguntas = readFile("src/main/resources/files/preguntas.txt");
-    public static Map<String, List<String>> respuestas = readAnswers("src/main/resources/files/respuestas.txt");
-
+    public static List<String> preguntas = readFile("/files/preguntas.txt");
+    public static Map<String, List<String>> respuestas = readAnswers("/files/respuestas.txt");
     public static List<String> readFile(String filename) {
         List<String> lines = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
@@ -43,4 +43,6 @@ public class FileReaderUtil {
         }
         return answers;
     }
+
+    
 }

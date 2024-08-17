@@ -43,7 +43,7 @@ public class PreguntasController implements Initializable{
             numPreguntas = Integer.parseInt(entrada);
             //hay que verificar si esta entre el rango de preguntas que permite el arbol
             if(preguntasDentroRango(numPreguntas,preguntasArchivo)){
-                mostrarVentasPreguntas();
+                mostrarVentanasPreguntas();
             }else{
                 mostrarAlerta("Error", "El número de preguntas no está en el rango permitido");
             }
@@ -52,19 +52,19 @@ public class PreguntasController implements Initializable{
     private boolean preguntasDentroRango(int numPreguntas,int rangoMax){
         return numPreguntas > 0 && numPreguntas <= rangoMax;
     }
-    private void mostrarVentasPreguntas() {
+    private void mostrarVentanasPreguntas() {
         List<String> respuestasList = new LinkedList<>();
         for (int i = 0; i < numPreguntas; i++) {
             // Llamar a la ventana FXML y obtener la respuesta
             String respuesta = llamarVentanaFXML();
             respuestasList.add(respuesta);
         }
+        
         // Hacer algo con la lista de respuestas
     }
     
     private String llamarVentanaFXML() {
-        // Implement your logic here to call the FXML window and get the response
-        return null; // Replace with the actual response
+        return null;
     }
 
     //metodo para que no admita letras el textfield
@@ -83,4 +83,5 @@ public class PreguntasController implements Initializable{
         alerta.setContentText(mensaje);
         alerta.showAndWait();
     }
+
 }
