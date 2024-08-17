@@ -1,0 +1,20 @@
+¿Es este animal un mamífero?
+¿Es este animal un carnívoro?
+¿Se para este animal sobre cuatro patas?
+¿Este animal tiene un tamaño mayor a 1 metro?
+¿Este animal vive en la selva?
+¿Es este animal un depredador?
+¿Puede este animal volar?
+¿Es este animal un reptil?
+¿Tiene este animal escamas?
+¿Es este animal acuático?
+¿Este animal es doméstico?
+¿Este animal tiene plumas?
+¿Este animal pone huevos?
+¿Este animal tiene garras?
+¿Es este animal un roedor?
+¿Este animal es nocturno?
+¿Este animal puede trepar árboles?
+¿Este animal es herbívoro?
+¿Este animal tiene colmillos?
+¿Este animal tiene una cola larga?

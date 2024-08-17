@@ -9,6 +9,10 @@ import java.util.List;
 import java.util.Map;
 
 public class FileReaderUtil {
+
+    public static List<String> preguntas = readFile("src/main/resources/files/preguntas.txt");
+    public static Map<String, List<String>> respuestas = readAnswers("src/main/resources/files/respuestas.txt");
+
     public static List<String> readFile(String filename) {
         List<String> lines = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
