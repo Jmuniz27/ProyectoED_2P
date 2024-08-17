@@ -3,6 +3,7 @@ package ec.edu.espol.proyectoed.p.modelo;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -395,4 +396,9 @@ public class BinaryTree<E extends Comparable<E>> {
         }
         return true;
     }
+    public void crearArbol(List<String> preguntas, Map<String, List<String>> animales){
+        for(Map.Entry<String, List<String>> entry: animales.entrySet()){
+            
+        }
+    } 
 }
