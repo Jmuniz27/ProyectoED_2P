@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.paint.Color?>
+
+    <VBox fx:id="vbAni1" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="229.0" prefWidth="211.0" spacing="20.0" style="-fx-background-color: #e9dda3; -fx-background-radius: 30; -fx-border-color: #9b6736; -fx-border-radius: 30;" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectoed.p.controller.PlantillaAnimalController">
+        <children>
+           <Text fx:id="txtAni1" fill="#5a3420" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal1" textAlignment="CENTER" wrappingWidth="166.76416015625">
+              <font>
+                 <Font name="Arial Rounded MT Bold" size="18.0" />
+              </font>
+           </Text>
+           <ImageView fx:id="ivAni1" fitHeight="128.0" fitWidth="139.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                 <Image url="@../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI%20-%202024/Estructuras%20de%20Datos/Segundo%20Parcial/Oficial%20Proyecto/ProyectoED_2P/src/main/resources/imagenes/prueba.jpg" />
+              </image>
+           </ImageView>
+        </children>
+        <effect>
+           <DropShadow>
+              <color>
+                 <Color red="0.6078431606292725" green="0.40392157435417175" blue="0.21176470816135406" />
+              </color>
+           </DropShadow>
+        </effect>
+     </VBox>
