@@ -41,7 +41,13 @@ public class AnimalUnicoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ivFondo.setImage(new Image("/imagenes/respuesta.png"));
-        // TODO
+        ivFotoAnimal.setFitWidth(175); 
+        ivFotoAnimal.setFitHeight(198);
+        ivFotoAnimal.setSmooth(true);  // Suaviza la imagen al redimensionarla
+        ivFotoAnimal.setCache(true); 
+        ivFotoAnimal.setPreserveRatio(false);
+        ivFotoAnimal.setImage(new Image("https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/002_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg/500px-002_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg"));
+        
     }    
 
     @FXML
