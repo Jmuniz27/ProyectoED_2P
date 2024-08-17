@@ -11,22 +11,28 @@ import org.json.JSONObject;
 
 public class AnimalInfo {
     public AnimalInfo(String animalName){
+        this.animalName = animalName;
         this.getAnimalInfo(animalName);
     }
 
     private static final String WIKIPEDIA_API_URL = "https://es.wikipedia.org/api/rest_v1/page/summary/";
-    private static String animalDecs;
-    private static String animalImg;
+    private String animalDecs;
+    private String animalImg;
+    private String animalName;
 
-    public static String getAnimalDecs() {
+    public String getAnimalDecs() {
         return animalDecs;
     }
 
-    public static String getAnimalImg() {
+    public String getAnimalImg() {
         return animalImg;
     }
+    
+    public String getAnimalName() {
+        return animalName;
+    }
 
-    public void getAnimalInfo(String animalName){
+    public AnimalInfo getAnimalInfo(String animalName){
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
             HttpGet request = new HttpGet(WIKIPEDIA_API_URL + animalName);
 
@@ -43,9 +49,7 @@ public class AnimalInfo {
                         json.getJSONObject("thumbnail").optString("source", "URL de imagen no disponible.")
                         : "URL de imagen no disponible.";
                 animalImg = imageUrl;
-                // Muestra la información
-                System.out.println("Descripción: " + description);
-                System.out.println("Imagen: " + imageUrl);
+                return this;
             } catch (ParseException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -55,6 +59,7 @@ public class AnimalInfo {
             e.printStackTrace();
             System.out.println("Error al obtener la información del animal.");
         }
+        return null;
     }
     
 }

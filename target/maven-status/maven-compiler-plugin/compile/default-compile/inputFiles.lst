@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\modelo\BinaryTree.java
 c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\modelo\AnimalInfo.java
 c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\InicioController.java
@@ -13,3 +14,21 @@ c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\E
 c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\modelo\Pregunta.java
 c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\modelo\NodeBinaryTree.java
 
+=======
+/Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/controller/NoSolucionController.java
+/Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/controller/PreguntasController.java
+/Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/modelo/AnimalInfo.java
+/Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/controller/PrimaryController.java
+/Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/App.java
+/Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/SecondaryController.java
+/Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/modelo/NodeBinaryTree.java
+/Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/modelo/Pregunta.java
+/Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/util/Util.java
+/Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/util/FileReaderUtil.java
+/Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/controller/ListaAnimalesController.java
+/Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/controller/InicioController.java
+/Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/controller/PlantillaAnimalController.java
+/Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/controller/AnimalUnicoController.java
+/Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/module-info.java
+/Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/modelo/BinaryTree.java
+>>>>>>> b4db61a (Comienzo de ver lista de animales)
