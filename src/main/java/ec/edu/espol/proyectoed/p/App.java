@@ -10,6 +10,10 @@ import javafx.scene.media.MediaPlayer;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
+import java.util.Map;
+
+import ec.edu.espol.proyectoed.p.util.FileReaderUtil;
 
 /**
  * JavaFX App
@@ -21,6 +25,10 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        List<String> preguntas = FileReaderUtil.preguntas;
+        Map<String, List<String>> respuestas = FileReaderUtil.respuestas;
+        System.out.println("Preguntas: " + preguntas);
+        System.out.println("Respuestas: " + respuestas);
         // Especifica la ruta completa del archivo FXML con su extensión
         scene = new Scene(loadFXML("inicio.fxml"), 1200, 800);
         stage.setScene(scene);

@@ -7,6 +7,10 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.Stack;
 
+import javafx.scene.Node;
+
+import java.util.Map;
+
 public class BinaryTree<E extends Comparable<E>> {
     private NodeBinaryTree<E> root;
 
