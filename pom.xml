@@ -28,10 +28,6 @@
     </dependencies>
     <build>
         <resources>
-            <!-- Especificar la ubicación de los recursos -->
-            <resource>
-                <directory>src/main/resources/ec/edu/espol/proyectoed/p/fxml</directory>
-            </resource>
             <resource>
                 <directory>src/main/resources</directory>
                 <includes>
