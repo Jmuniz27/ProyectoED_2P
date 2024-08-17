@@ -30,19 +30,20 @@ public class App extends Application {
         System.out.println("Preguntas: " + preguntas);
         System.out.println("Respuestas: " + respuestas);
         // Especifica la ruta completa del archivo FXML con su extensión
-        scene = new Scene(loadFXML("inicio.fxml"), 1200, 800);
+        scene = new Scene(loadFXML("fxml/inicio.fxml"), 1000, 560);
         stage.setScene(scene);
         stage.show();
     }
 
     public static void setRoot(String fxml) throws IOException {
         // Especifica la ruta completa del archivo FXML con su extensión
-        scene.setRoot(loadFXML(fxml + ".fxml"));
+        scene.setRoot(loadFXML("fxml/" + fxml + ".fxml"));
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
         // Utiliza el ClassLoader para cargar el archivo FXML desde el directorio de recursos
         URL fxmlLocation = App.class.getClassLoader().getResource(fxml);
+        System.out.println(fxmlLocation);
         if (fxmlLocation == null) {
             throw new IOException("FXML file not found: " + fxml);
         }
