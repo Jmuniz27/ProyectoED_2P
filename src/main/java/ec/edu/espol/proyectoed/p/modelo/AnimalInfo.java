@@ -56,5 +56,5 @@ public class AnimalInfo {
             System.out.println("Error al obtener la información del animal.");
         }
     }
-
+    
 }
