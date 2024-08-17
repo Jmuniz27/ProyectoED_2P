@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/SecondaryController.java
 /Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/modelo/NodeBinaryTree.java
 /Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/modelo/Pregunta.java
@@ -10,3 +11,17 @@
 /Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/module-info.java
 /Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/App.java
 /Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/modelo/BinaryTree.java
+=======
+C:\Users\zahid\OneDrive - Escuela Superior Politécnica del Litoral\Waos\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\modelo\BinaryTree.java
+C:\Users\zahid\OneDrive - Escuela Superior Politécnica del Litoral\Waos\ProyectoED_2P\src\main\java\module-info.java
+C:\Users\zahid\OneDrive - Escuela Superior Politécnica del Litoral\Waos\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\PreguntasController.java
+C:\Users\zahid\OneDrive - Escuela Superior Politécnica del Litoral\Waos\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\modelo\NodeBinaryTree.java
+C:\Users\zahid\OneDrive - Escuela Superior Politécnica del Litoral\Waos\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\SecondaryController.java
+C:\Users\zahid\OneDrive - Escuela Superior Politécnica del Litoral\Waos\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\util\FileReaderUtil.java
+C:\Users\zahid\OneDrive - Escuela Superior Politécnica del Litoral\Waos\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\util\Util.java
+C:\Users\zahid\OneDrive - Escuela Superior Politécnica del Litoral\Waos\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\App.java
+C:\Users\zahid\OneDrive - Escuela Superior Politécnica del Litoral\Waos\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\NoSolucionController.java
+C:\Users\zahid\OneDrive - Escuela Superior Politécnica del Litoral\Waos\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\PrimaryController.java
+C:\Users\zahid\OneDrive - Escuela Superior Politécnica del Litoral\Waos\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\modelo\Pregunta.java
+C:\Users\zahid\OneDrive - Escuela Superior Politécnica del Litoral\Waos\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\InicioController.java
+>>>>>>> NoSolucion
