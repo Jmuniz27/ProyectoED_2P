@@ -13,6 +13,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.Map;
 
+import ec.edu.espol.proyectoed.p.modelo.AnimalInfo;
 import ec.edu.espol.proyectoed.p.util.FileReaderUtil;
 
 /**
@@ -25,6 +26,10 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        //prueba api
+        AnimalInfo animal = new AnimalInfo("gato");
+        System.out.println(animal.getAnimalDecs());
+        System.out.println(animal.getAnimalImg());
         List<String> preguntas = FileReaderUtil.preguntas;
         Map<String, List<String>> respuestas = FileReaderUtil.respuestas;
         System.out.println("Preguntas: " + preguntas);
