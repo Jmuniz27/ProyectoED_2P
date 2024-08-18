@@ -43,6 +43,8 @@ public class FileReaderUtil {
         }
         return answers;
     }
-
+    public static List<String> getQuestions() {
+        return preguntas;
+    }
     
 }
