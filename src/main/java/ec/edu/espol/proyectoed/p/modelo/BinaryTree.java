@@ -5,11 +5,15 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
+import java.util.Scanner;
 import java.util.Stack;
 
 public class BinaryTree<E extends Comparable<E>> {
     private NodeBinaryTree<E> root;
-
+    public BinaryTree(List<E> preguntas, Map<E, List<String>> animales){
+        this.root = null;
+        crearArbol(preguntas, animales);
+    }
     public BinaryTree() {
         this.root=null;
     }
@@ -424,6 +428,43 @@ public class BinaryTree<E extends Comparable<E>> {
         }
         return nodo;
     }
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        buildString(sb, this.root, 0);
+        return sb.toString();
+    }
 
-    
+    private void buildString(StringBuilder sb, NodeBinaryTree<E> node, int level) {
+        if (node == null) {
+            return;
+        }
+        // Añadir indentación según el nivel del nodo
+        for (int i = 0; i < level; i++) {
+            sb.append("  ");
+        }
+        sb.append(node.getContent()).append("\n");
+
+        // Recorrer subárbol izquierdo
+        if (node.getLeft() != null) {
+            buildString(sb, node.getLeft().getRoot(), level + 1);
+        } else {
+            // Indentar y agregar un placeholder para el hijo izquierdo nulo
+            for (int i = 0; i < level + 1; i++) {
+                sb.append("  ");
+            }
+            sb.append("null\n");
+        }
+
+        // Recorrer subárbol derecho
+        if (node.getRight() != null) {
+            buildString(sb, node.getRight().getRoot(), level + 1);
+        } else {
+            // Indentar y agregar un placeholder para el hijo derecho nulo
+            for (int i = 0; i < level + 1; i++) {
+                sb.append("  ");
+            }
+            sb.append("null\n");
+        }
+    }
 }

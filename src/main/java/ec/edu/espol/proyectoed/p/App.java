@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 import ec.edu.espol.proyectoed.p.modelo.AnimalInfo;
+import ec.edu.espol.proyectoed.p.modelo.BinaryTree;
 import ec.edu.espol.proyectoed.p.util.FileReaderUtil;
 
 /**
@@ -28,10 +29,12 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         List<String> preguntas = FileReaderUtil.preguntas;
         Map<String, List<String>> respuestas = FileReaderUtil.respuestas;
-        System.out.println("Preguntas: " + preguntas);
-        System.out.println("Respuestas: " + respuestas);
+        System.out.println(respuestas);
+        BinaryTree<String> arbol = new BinaryTree<>();
+        arbol.crearArbol(preguntas, respuestas);
+
         // Especifica la ruta completa del archivo FXML con su extensión
-        scene = new Scene(loadFXML("fxml/listaAnimales.fxml"), 1000, 560);
+        scene = new Scene(loadFXML("fxml/preguntas.fxml"), 1000, 560);
         stage.setScene(scene);
         stage.show();
     }

@@ -9,6 +9,7 @@ import java.util.Map;
 
 public class Util {
     
+    
     public static BinaryTree<String> buildDecisionTree(List<String> questions, Map<String, List<String>> animalsWithAnswers) {
         BinaryTree<String> tree = new BinaryTree<>();
         for (Map.Entry<String, List<String>> entry : animalsWithAnswers.entrySet()) {

@@ -1,15 +1,20 @@
 package ec.edu.espol.proyectoed.p.controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Map;
 import java.util.LinkedList;
 
+import ec.edu.espol.proyectoed.p.modelo.BinaryTree;
+import ec.edu.espol.proyectoed.p.modelo.NodeBinaryTree;
 import ec.edu.espol.proyectoed.p.util.FileReaderUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -17,6 +22,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class PreguntasController implements Initializable{
@@ -29,12 +35,17 @@ public class PreguntasController implements Initializable{
 
     private List<String> preguntas = FileReaderUtil.preguntas;
     private Map<String, List<String>> respuestas = FileReaderUtil.respuestas;
+    private BinaryTree<String> tree = FileReaderUtil.arbolDecision; // Tu árbol binario
     //inicializar con contador preguntas del archivo
     private int preguntasArchivo = preguntas.size();
 
     private int numPreguntas;
+
+    private NodeBinaryTree<String> currentNode;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        currentNode = tree.getRoot();
+        System.out.println(currentNode.getContent());
         this.setNumericTextField(nPreguntasTF);
     }
 
@@ -59,21 +70,55 @@ public class PreguntasController implements Initializable{
     }
 
     private void mostrarVentanasPreguntas() {
-        List<String> respuestasList = new LinkedList<>();
-        for (int i = 0; i < numPreguntas; i++) {
-            String preguntaActual = preguntas.get(i); // Obtiene la pregunta actual
-            
+        if (currentNode == null) {
+            mostrarAlerta("Fin", "Has llegado a un nodo nulo.");
+            return;
         }
         
-        // Hacer algo con la lista de respuestas
-    }
+        if (currentNode.getLeft() == null && currentNode.getRight() == null) {
+            mostrarAlerta("Resultado", "Has llegado al final del árbol: " + currentNode.getContent());
+            return;
+        }
     
-    private String llamarVentana() {
-            // Crear una nueva ventana
-            // Espera hasta que la ventana se cierre antes de continuar
-
-            return null; // Devuelve la respuesta capturada
+        // Obtener la pregunta del nodo actual
+        String preguntaActual = currentNode.getContent();
+        // Mostrar la ventana FXML para obtener la respuesta
+        String respuesta = llamarVentanaFXML(preguntaActual);
+    
+        // Avanzar en el árbol basado en la respuesta
+        if (respuesta.equalsIgnoreCase("Si")) {
+            currentNode = currentNode.getLeft() != null ? currentNode.getLeft().getRoot() : null;
+        } else {
+            currentNode = currentNode.getRight() != null ? currentNode.getRight().getRoot() : null;
+        }
+    
+        // Recursivamente mostrar la siguiente pregunta
+        mostrarVentanasPreguntas();
     }
+    private String llamarVentanaFXML(String pregunta) {
+    try {
+        // Cargar el archivo FXML
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pregunta.fxml"));
+        Parent root = loader.load();
+
+        // Obtener el controlador asociado
+        PreguntaController controller = loader.getController();
+        controller.setPregunta(pregunta);
+
+        // Crear y mostrar la ventana
+            Stage stage = new Stage();
+            stage.setTitle("Pregunta");
+            stage.setScene(new Scene(root));
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.showAndWait(); // Esperar hasta que la ventana se cierre
+
+        // Retornar la respuesta obtenida del controlador
+        return controller.getRespuesta();
+    } catch (IOException e) {
+        e.printStackTrace();
+        return null;
+    }
+}
 
     //metodo para que no admita letras el textfield
     private void setNumericTextField(TextField textField) {

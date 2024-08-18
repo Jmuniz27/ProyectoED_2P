@@ -14,6 +14,7 @@ import ec.edu.espol.proyectoed.p.modelo.BinaryTree;
 public class FileReaderUtil {
     public static List<String> preguntas = readFile("src/main/resources/files/preguntas.txt");
     public static Map<String, List<String>> respuestas = readAnswers("src/main/resources/files/respuestas.txt");
+    public static BinaryTree<String> arbolDecision = new BinaryTree<>(preguntas, respuestas);
     public static List<String> readFile(String filename) {
         List<String> lines = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
@@ -51,7 +52,6 @@ public class FileReaderUtil {
         List<String> respuestasUser = new LinkedList<>();
         String respuestaAnimal;
         while(!arbol.isLeaf()){
-            System.out.println(arbol.getData());
             String respuestaIng = "algo";
             respuestasUser.add(respuestaIng);
             if(respuestaIng.equalsIgnoreCase("si")){
