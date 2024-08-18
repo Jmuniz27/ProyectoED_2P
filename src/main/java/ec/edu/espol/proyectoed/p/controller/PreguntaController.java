@@ -29,6 +29,12 @@ public class PreguntaController implements Initializable {
     private Label lblPregunta;
 
     private String respuesta;
+    @FXML
+    public static HBox botonHBox;
+    @FXML
+    private Button siBtn;
+    @FXML
+    private Button noBtn;
 
     public void setPregunta(String pregunta) {
         lblPregunta.setText(pregunta);
@@ -39,13 +45,13 @@ public class PreguntaController implements Initializable {
     }
 
     @FXML
-    private void handleSiButton(ActionEvent event) {
-        respuesta = "Sí";
+    private void guardarRespuestaSi(ActionEvent event) {
+        respuesta = "Si";
         closeWindow();
     }
 
     @FXML
-    private void handleNoButton(ActionEvent event) {
+    private void guardarRespuestaNo(ActionEvent event) {
         respuesta = "No";
         closeWindow();
     }

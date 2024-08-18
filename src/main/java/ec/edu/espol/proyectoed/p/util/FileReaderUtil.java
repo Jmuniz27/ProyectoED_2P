@@ -1,7 +1,8 @@
 package ec.edu.espol.proyectoed.p.util;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,21 +16,23 @@ public class FileReaderUtil {
     public static List<String> preguntas = readFile("src/main/resources/files/preguntas.txt");
     public static Map<String, List<String>> respuestas = readAnswers("src/main/resources/files/respuestas.txt");
     public static BinaryTree<String> arbolDecision = new BinaryTree<>(preguntas, respuestas);
+
     public static List<String> readFile(String filename) {
         List<String> lines = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(filename), "UTF-8"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 lines.add(line);
             }
         } catch (IOException e) {
-            System.out.println("Error al leer el archivo");
+            System.out.println("Error al leer el archivo: " + e.getMessage());
         }
         return lines;
     }
+
     public static Map<String, List<String>> readAnswers(String filename) {
         Map<String, List<String>> answers = new HashMap<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(filename), "UTF-8"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(" ");
@@ -41,13 +44,15 @@ public class FileReaderUtil {
                 answers.put(animal, respuestas);
             }
         } catch (IOException e) {
-            System.out.println("Error al leer el archivo");
+            System.out.println("Error al leer el archivo: " + e.getMessage());
         }
         return answers;
     }
+
     public static List<String> getQuestions() {
         return preguntas;
     }
+
     public static List<String> recorrerOpciones(BinaryTree<String> arbol){
         List<String> respuestasUser = new LinkedList<>();
         String respuestaAnimal;
@@ -62,5 +67,13 @@ public class FileReaderUtil {
             respuestaAnimal = arbol.getRoot().getContent();
         }
         return respuestasUser;
+    }
+
+    public static BinaryTree<String> recorrerArbol(BinaryTree<String> arbol, String respo){
+        if(respo.equalsIgnoreCase("si")){
+            return arbol.getRoot().getLeft();
+        } else {
+            return arbol.getRoot().getRight();
+        }
     }
 }

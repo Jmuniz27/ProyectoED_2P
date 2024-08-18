@@ -24,6 +24,7 @@ public class App extends Application {
 
     private static Scene scene;
     private static MediaPlayer mediaPlayer;
+    public static FXMLLoader fxmlLoader;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -51,7 +52,7 @@ public class App extends Application {
         if (fxmlLocation == null) {
             throw new IOException("FXML file not found: " + fxml);
         }
-        FXMLLoader fxmlLoader = new FXMLLoader(fxmlLocation);
+        fxmlLoader = new FXMLLoader(fxmlLocation);
         return fxmlLoader.load();
     }
 

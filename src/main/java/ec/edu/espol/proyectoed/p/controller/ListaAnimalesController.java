@@ -7,8 +7,10 @@ package ec.edu.espol.proyectoed.p.controller;
 import ec.edu.espol.proyectoed.p.App;
 import ec.edu.espol.proyectoed.p.modelo.AnimalInfo;
 import java.io.IOException;
+import java.lang.ModuleLayer.Controller;
 import java.net.URL;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,6 +21,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -59,22 +62,14 @@ public class ListaAnimalesController implements Initializable {
     @FXML
     private VBox next;
     
-    private LinkedList<AnimalInfo> animales; 
+    public static List<AnimalInfo> animales; 
     private int startIndex = 0;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        animales = new LinkedList<>();
         ivFondo.setImage(new Image("/imagenes/respuesta.png"));
-        animales.add(new AnimalInfo("Leon"));
-        animales.add(new AnimalInfo("Tigre"));
-        animales.add(new AnimalInfo("Elefante"));
-        animales.add(new AnimalInfo("Mariposa"));
-        animales.add(new AnimalInfo("Oso"));
-        animales.add(new AnimalInfo("Abeja"));
-        animales.add(new AnimalInfo("Ardilla"));
         if (animales.size() > 3) {
             // Solo mostramos las flechas si hay más de tres animales
             before.setVisible(true);
@@ -129,6 +124,20 @@ public class ListaAnimalesController implements Initializable {
             if (startIndex + i < animales.size()) {
                 AnimalInfo animal = animales.get(startIndex + i);
                 VBox animalBox = plantillaAnimal(animal);
+                animalBox.setOnMouseClicked((MouseEvent event) -> {
+                    // Mostrar la ventana de un solo animal
+                    AnimalUnicoController.aniInfo = animal;
+                    try {
+                        App.setRoot("animalUnico");
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/animalUnico.fxml"));
+                        AnchorPane an = loader.load();
+                        Button btn = (Button) an.lookup("#btnRegresar");
+                        btn.setVisible(true);
+                        
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
                 hbAnimales.getChildren().add(animalBox);
             }
         }
@@ -166,5 +175,6 @@ public class ListaAnimalesController implements Initializable {
         // Mostrar/ocultar flecha derecha si estamos en el último conjunto de elementos
         next.setVisible(startIndex + 3 < animales.size());
     }
+
     
 }

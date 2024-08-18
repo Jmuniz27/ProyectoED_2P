@@ -7,6 +7,8 @@ import java.util.ResourceBundle;
 import java.util.Map;
 import java.util.LinkedList;
 
+import ec.edu.espol.proyectoed.p.App;
+import ec.edu.espol.proyectoed.p.modelo.AnimalInfo;
 import ec.edu.espol.proyectoed.p.modelo.BinaryTree;
 import ec.edu.espol.proyectoed.p.modelo.NodeBinaryTree;
 import ec.edu.espol.proyectoed.p.util.FileReaderUtil;
@@ -70,35 +72,74 @@ public class PreguntasController implements Initializable{
     }
 
     private void mostrarVentanasPreguntas() {
-        if (currentNode == null) {
-            mostrarAlerta("Fin", "Has llegado a un nodo nulo.");
-            return;
+        System.out.println("Mostrando preguntas");
+        for(int i = 0; i < numPreguntas; i++){
+            String preg = preguntas.get(i);
+            String resp = llamarVentanaFXML(preg);
+            System.out.println("Respuesta: " + resp);
+            if (tree == null) {
+                //no solucion
+                mostrarNoSolucion();
+                return;
+            } else {
+                tree = FileReaderUtil.recorrerArbol(tree, resp);
+            }
+            }
+        //termino de preguntar
+        mostrarAnimal();
         }
-        
-        if (currentNode.getLeft() == null && currentNode.getRight() == null) {
-            mostrarAlerta("Resultado", "Has llegado al final del árbol: " + currentNode.getContent());
-            return;
+
+    private void mostrarAnimal() {
+        //mostrar ventana de un solo animal o lista de animales
+        List<NodeBinaryTree<String>> soluciones = tree.getLeaves();
+        List<AnimalInfo> animales = new LinkedList<>();
+        if(soluciones.size() == 1){
+            //mostrar ventana de un solo animal
+            System.out.println("Animal: " + soluciones.get(0).getContent());
+            AnimalUnicoController.aniInfo = new AnimalInfo(soluciones.get(0).getContent());
+            try {
+                App.setRoot("animalUnico");
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }else{
+            //mostrar ventana de lista de animales
+            System.out.println("Animales: ");
+            for(NodeBinaryTree<String> sol : soluciones){
+                System.out.println(sol.getContent());
+            }
+            for(NodeBinaryTree<String> sol : soluciones){
+                AnimalInfo animal = new AnimalInfo(sol.getContent());
+                animales.add(animal);
+            }
+            ListaAnimalesController.animales = animales;
+            try {
+                App.setRoot("listaAnimales");
+                
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         }
-    
-        // Obtener la pregunta del nodo actual
-        String preguntaActual = currentNode.getContent();
-        // Mostrar la ventana FXML para obtener la respuesta
-        String respuesta = llamarVentanaFXML(preguntaActual);
-    
-        // Avanzar en el árbol basado en la respuesta
-        if (respuesta.equalsIgnoreCase("Si")) {
-            currentNode = currentNode.getLeft() != null ? currentNode.getLeft().getRoot() : null;
-        } else {
-            currentNode = currentNode.getRight() != null ? currentNode.getRight().getRoot() : null;
-        }
-    
-        // Recursivamente mostrar la siguiente pregunta
-        mostrarVentanasPreguntas();
     }
+
+    private void mostrarNoSolucion() {
+        //no hay animal que mostrar
+        // TODO Auto-generated method stub
+        System.out.println("No hay solución");
+        try {
+            App.setRoot("noSolucion");
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
     private String llamarVentanaFXML(String pregunta) {
     try {
         // Cargar el archivo FXML
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pregunta.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Pregunta.fxml"));
         Parent root = loader.load();
 
         // Obtener el controlador asociado
@@ -106,11 +147,11 @@ public class PreguntasController implements Initializable{
         controller.setPregunta(pregunta);
 
         // Crear y mostrar la ventana
-            Stage stage = new Stage();
-            stage.setTitle("Pregunta");
-            stage.setScene(new Scene(root));
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.showAndWait(); // Esperar hasta que la ventana se cierre
+        Stage stage = new Stage();
+        stage.setTitle("Pregunta");
+        stage.setScene(new Scene(root));
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.showAndWait(); // Esperar hasta que la ventana se cierre
 
         // Retornar la respuesta obtenida del controlador
         return controller.getRespuesta();
