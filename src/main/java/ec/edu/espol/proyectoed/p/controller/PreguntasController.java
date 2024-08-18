@@ -1,15 +1,22 @@
 package ec.edu.espol.proyectoed.p.controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Map;
 import java.util.LinkedList;
 
+import ec.edu.espol.proyectoed.p.App;
+import ec.edu.espol.proyectoed.p.modelo.AnimalInfo;
+import ec.edu.espol.proyectoed.p.modelo.BinaryTree;
+import ec.edu.espol.proyectoed.p.modelo.NodeBinaryTree;
 import ec.edu.espol.proyectoed.p.util.FileReaderUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -17,6 +24,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class PreguntasController implements Initializable{
@@ -29,12 +37,17 @@ public class PreguntasController implements Initializable{
 
     private List<String> preguntas = FileReaderUtil.preguntas;
     private Map<String, List<String>> respuestas = FileReaderUtil.respuestas;
+    private BinaryTree<String> tree = FileReaderUtil.arbolDecision; // Tu árbol binario
     //inicializar con contador preguntas del archivo
     private int preguntasArchivo = preguntas.size();
 
     private int numPreguntas;
+
+    private NodeBinaryTree<String> currentNode;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        currentNode = tree.getRoot();
+        System.out.println(currentNode.getContent());
         this.setNumericTextField(nPreguntasTF);
     }
 
@@ -59,21 +72,94 @@ public class PreguntasController implements Initializable{
     }
 
     private void mostrarVentanasPreguntas() {
-        List<String> respuestasList = new LinkedList<>();
-        for (int i = 0; i < numPreguntas; i++) {
-            String preguntaActual = preguntas.get(i); // Obtiene la pregunta actual
-            
+        System.out.println("Mostrando preguntas");
+        for(int i = 0; i < numPreguntas; i++){
+            String preg = preguntas.get(i);
+            String resp = llamarVentanaFXML(preg);
+            System.out.println("Respuesta: " + resp);
+            if (tree == null) {
+                //no solucion
+                mostrarNoSolucion();
+                return;
+            } else {
+                tree = FileReaderUtil.recorrerArbol(tree, resp);
+            }
+            }
+        //termino de preguntar
+        mostrarAnimal();
         }
-        
-        // Hacer algo con la lista de respuestas
-    }
-    
-    private String llamarVentana() {
-            // Crear una nueva ventana
-            // Espera hasta que la ventana se cierre antes de continuar
 
-            return null; // Devuelve la respuesta capturada
+    private void mostrarAnimal() {
+        //mostrar ventana de un solo animal o lista de animales
+        List<NodeBinaryTree<String>> soluciones = tree.getLeaves();
+        List<AnimalInfo> animales = new LinkedList<>();
+        if(soluciones.size() == 1){
+            //mostrar ventana de un solo animal
+            System.out.println("Animal: " + soluciones.get(0).getContent());
+            AnimalUnicoController.aniInfo = new AnimalInfo(soluciones.get(0).getContent());
+            try {
+                App.setRoot("animalUnico");
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }else{
+            //mostrar ventana de lista de animales
+            System.out.println("Animales: ");
+            for(NodeBinaryTree<String> sol : soluciones){
+                System.out.println(sol.getContent());
+            }
+            for(NodeBinaryTree<String> sol : soluciones){
+                AnimalInfo animal = new AnimalInfo(sol.getContent());
+                animales.add(animal);
+            }
+            ListaAnimalesController.animales = animales;
+            try {
+                App.setRoot("listaAnimales");
+                
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
     }
+
+    private void mostrarNoSolucion() {
+        //no hay animal que mostrar
+        // TODO Auto-generated method stub
+        System.out.println("No hay solución");
+        try {
+            App.setRoot("noSolucion");
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    private String llamarVentanaFXML(String pregunta) {
+    try {
+        // Cargar el archivo FXML
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Pregunta.fxml"));
+        Parent root = loader.load();
+
+        // Obtener el controlador asociado
+        PreguntaController controller = loader.getController();
+        controller.setPregunta(pregunta);
+
+        // Crear y mostrar la ventana
+        Stage stage = new Stage();
+        stage.setTitle("Pregunta");
+        stage.setScene(new Scene(root));
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.showAndWait(); // Esperar hasta que la ventana se cierre
+
+        // Retornar la respuesta obtenida del controlador
+        return controller.getRespuesta();
+    } catch (IOException e) {
+        e.printStackTrace();
+        return null;
+    }
+}
 
     //metodo para que no admita letras el textfield
     private void setNumericTextField(TextField textField) {

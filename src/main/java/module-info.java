@@ -8,6 +8,7 @@ module ec.edu.espol.proyectoed.p {
     requires org.json;
     requires org.apache.httpcomponents.client5.httpclient5;
     requires org.apache.httpcomponents.core5.httpcore5;
+    requires javafx.graphics;
 
     opens ec.edu.espol.proyectoed.p.controller to javafx.fxml;
     

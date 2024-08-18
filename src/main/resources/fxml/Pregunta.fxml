@@ -1,45 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.PreguntaController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="800.0" stylesheets="@../interfaz/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectoed.p.controller.PreguntaController">
    <center>
-      <AnchorPane prefHeight="489.0" prefWidth="849.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="352.0" prefWidth="508.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="566.0" fitWidth="1006.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../imagenes/pregunta.png" />
-               </image>
-            </ImageView>
-            <VBox layoutX="248.0" layoutY="172.0" prefHeight="343.0" prefWidth="511.0">
+            <Label fx:id="lblPregunta" text="Label" />
+            <HBox fx:id="botonHBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="80.0">
                <children>
-                  <Text fx:id="lblPregunta" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="510.9366455078125">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="24.0" />
-                     </font></Text>
-                  <HBox fx:id="botonHBox" alignment="BOTTOM_CENTER" prefHeight="158.0" prefWidth="511.0">
-                     <children>
-                        <Button fx:id="siBtn" mnemonicParsing="false" onAction="#guardarRespuestaSi" prefHeight="20.0" prefWidth="90.0" style="-fx-background-color: #e69e43; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #5a3420;" text="SÍ" textFill="#5a3420">
-                           <font>
-                              <Font name="Arial Rounded MT Bold" size="27.0" />
-                           </font></Button>
-                        <Button fx:id="noBtn" mnemonicParsing="false" onAction="#guardarRespuestaNo" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #e69e43; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #5a3420;" text="NO" textFill="#5a3420">
-                           <font>
-                              <Font name="Arial Rounded MT Bold" size="27.0" />
-                           </font></Button>
-                     </children>
-                  </HBox>
+                  <Button fx:id="siBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#guardarRespuestaSi" prefHeight="20.0" prefWidth="40.0" styleClass="styled-button" stylesheets="@../interfaz/styles.css" text="si" />
+                  <Button fx:id="noBtn" alignment="CENTER" mnemonicParsing="false" onAction="#guardarRespuestaNo" prefHeight="20.0" prefWidth="40.0" styleClass="styled-button" text="no" />
                </children>
-            </VBox>
+            </HBox>
          </children>
-      </AnchorPane>
+      </VBox>
    </center>
 </BorderPane>

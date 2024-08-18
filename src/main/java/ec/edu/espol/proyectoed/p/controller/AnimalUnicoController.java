@@ -16,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseDragEvent;
+import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 
 /**
@@ -30,18 +31,22 @@ public class AnimalUnicoController implements Initializable {
     @FXML
     private Text txtDescripcion;
     @FXML
-    private Button btnVolver;
-    @FXML
     private ImageView ivFondo;
     @FXML
     private ImageView ivFotoAnimal;
-
+    public static AnimalInfo aniInfo;
+    @FXML
+    private HBox hboxBtns;
+    private Button btnVolver11;
+    @FXML
+    private Button btnRegresar;
+    @FXML
+    private Button btnVolver;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        AnimalInfo aniInfo = new AnimalInfo("perro");
         ivFondo.setImage(new Image("/imagenes/respuesta.png"));
         ivFotoAnimal.setFitWidth(175); 
         ivFotoAnimal.setFitHeight(198);
@@ -51,7 +56,15 @@ public class AnimalUnicoController implements Initializable {
         ivFotoAnimal.setImage(new Image(aniInfo.getAnimalImg()));
         txtNombreAnimal.setText(aniInfo.getAnimalName());
         txtDescripcion.setText(aniInfo.getAnimalDecs());
-    }    
+    }
+    
+    public Button getBtnRegresar() {
+        return btnRegresar;
+    }
+
+    public void setBtnRegresar(Button btnRegresar) {
+        this.btnRegresar = btnRegresar;
+    }
 
     @FXML
     private void volverJugar(ActionEvent event) {
@@ -64,6 +77,10 @@ public class AnimalUnicoController implements Initializable {
 
     @FXML
     private void mouseEnBoton(MouseDragEvent event) {
+    }
+
+    @FXML
+    private void clickRegresar(ActionEvent event) {
     }
     
 }

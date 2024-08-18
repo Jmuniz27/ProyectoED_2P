@@ -1,7 +1,3 @@
-ec\edu\espol\proyectoed\p\SecondaryController.class
-ec\edu\espol\proyectoed\p\controller\AnimalUnicoController.class
-ec\edu\espol\proyectoed\p\util\Util.class
-ec\edu\espol\proyectoed\p\modelo\NodeBinaryTree.class
-ec\edu\espol\proyectoed\p\controller\PreguntaController.class
-ec\edu\espol\proyectoed\p\modelo\BinaryTree.class
 module-info.class
+ec\edu\espol\proyectoed\p\modelo\AnimalInfo.class
+ec\edu\espol\proyectoed\p\modelo\Pregunta.class
