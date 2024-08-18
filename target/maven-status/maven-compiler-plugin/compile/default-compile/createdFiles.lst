@@ -4,14 +4,11 @@ ec\edu\espol\proyectoed\p\controller\PreguntasController.class
 ec\edu\espol\proyectoed\p\controller\AnimalUnicoController.class
 ec\edu\espol\proyectoed\p\util\Util.class
 ec\edu\espol\proyectoed\p\modelo\NodeBinaryTree.class
+ec\edu\espol\proyectoed\p\controller\PreguntaController.class
 ec\edu\espol\proyectoed\p\modelo\BinaryTree.class
-<<<<<<< HEAD
-ec\edu\espol\proyectoed\p\App.class
-=======
 ec\edu\espol\proyectoed\p\controller\NoSolucionController.class
 ec\edu\espol\proyectoed\p\App.class
 ec\edu\espol\proyectoed\p\modelo\AnimalInfo.class
->>>>>>> 4c15ff2d775ceb5f9edde65598c0801c4e9bd579
 ec\edu\espol\proyectoed\p\util\FileReaderUtil.class
 ec\edu\espol\proyectoed\p\controller\PrimaryController.class
 module-info.class
