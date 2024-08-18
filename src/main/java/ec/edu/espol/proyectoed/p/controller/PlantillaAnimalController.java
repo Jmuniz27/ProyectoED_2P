@@ -4,46 +4,40 @@
  */
 package ec.edu.espol.proyectoed.p.controller;
 
-import ec.edu.espol.proyectoed.p.App;
+import ec.edu.espol.proyectoed.p.modelo.AnimalInfo;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import java.io.IOException;
-import javafx.scene.input.MouseDragEvent;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
  *
- * @author zahid
+ * @author isabella
  */
-public class NoSolucionController implements Initializable {
+public class PlantillaAnimalController implements Initializable {
 
     @FXML
-    private Button btnVolver;
+    private VBox vbAni1;
+    @FXML
+    private Text txtAni1;
+    @FXML
+    private ImageView ivAni1;
 
     /**
      * Initializes the controller class.
      */
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
-    @FXML
-    private void volverJugar(ActionEvent event) {
-        try{
-            App.setRoot("inicio");
-        }catch(IOException e){
-            e.printStackTrace();
-        }
-    }
-
-    @FXML
-    private void mouseEnBoton(MouseDragEvent event) {
-    }
+    
     
 }

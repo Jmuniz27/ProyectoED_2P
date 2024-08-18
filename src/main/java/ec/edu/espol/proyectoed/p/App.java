@@ -26,16 +26,12 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        //prueba api
-        AnimalInfo animal = new AnimalInfo("gato");
-        System.out.println(animal.getAnimalDecs());
-        System.out.println(animal.getAnimalImg());
         List<String> preguntas = FileReaderUtil.preguntas;
         Map<String, List<String>> respuestas = FileReaderUtil.respuestas;
         System.out.println("Preguntas: " + preguntas);
         System.out.println("Respuestas: " + respuestas);
         // Especifica la ruta completa del archivo FXML con su extensión
-        scene = new Scene(loadFXML("fxml/inicio.fxml"), 1000, 560);
+        scene = new Scene(loadFXML("fxml/listaAnimales.fxml"), 1000, 560);
         stage.setScene(scene);
         stage.show();
     }

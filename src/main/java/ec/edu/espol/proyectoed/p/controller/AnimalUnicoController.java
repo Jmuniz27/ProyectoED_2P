@@ -5,6 +5,7 @@
 package ec.edu.espol.proyectoed.p.controller;
 
 import ec.edu.espol.proyectoed.p.App;
+import ec.edu.espol.proyectoed.p.modelo.AnimalInfo;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -40,8 +41,16 @@ public class AnimalUnicoController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        AnimalInfo aniInfo = new AnimalInfo("perro");
         ivFondo.setImage(new Image("/imagenes/respuesta.png"));
-        // TODO
+        ivFotoAnimal.setFitWidth(175); 
+        ivFotoAnimal.setFitHeight(198);
+        ivFotoAnimal.setSmooth(true);  // Suaviza la imagen al redimensionarla
+        ivFotoAnimal.setCache(true); 
+        ivFotoAnimal.setPreserveRatio(false);
+        ivFotoAnimal.setImage(new Image(aniInfo.getAnimalImg()));
+        txtNombreAnimal.setText(aniInfo.getAnimalName());
+        txtDescripcion.setText(aniInfo.getAnimalDecs());
     }    
 
     @FXML

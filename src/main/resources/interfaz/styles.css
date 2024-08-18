@@ -1,0 +1,17 @@
+.styled-button {
+    -fx-background-color: #e9dda3;
+    -fx-border-radius: 30; 
+    -fx-background-radius: 30;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-text-fill: #64591e;
+    
+}
+.styled-button:pressed {
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.8), 15, 0.5, 0, 0);
+}
+.styled-button:hover {
+    -fx-background-color: #2980b9;  /* Cambia a un azul más oscuro al pasar el mouse */
+    -fx-cursor: hand;  /* Cambia el cursor a una mano */
+}
