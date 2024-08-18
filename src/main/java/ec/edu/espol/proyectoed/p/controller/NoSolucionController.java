@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import java.io.IOException;
+import javafx.scene.input.MouseDragEvent;
 
 /**
  * FXML Controller class
@@ -21,7 +22,7 @@ import java.io.IOException;
 public class NoSolucionController implements Initializable {
 
     @FXML
-    private Button btnRegresarInicio;
+    private Button btnVolver;
 
     /**
      * Initializes the controller class.
@@ -33,13 +34,16 @@ public class NoSolucionController implements Initializable {
     }    
 
     @FXML
-    private void regresarInicio(ActionEvent event) {
+    private void volverJugar(ActionEvent event) {
         try{
             App.setRoot("inicio");
         }catch(IOException e){
             e.printStackTrace();
         }
-        
+    }
+
+    @FXML
+    private void mouseEnBoton(MouseDragEvent event) {
     }
     
 }
