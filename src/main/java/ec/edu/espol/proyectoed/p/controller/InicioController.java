@@ -11,7 +11,6 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseDragEvent;
-import javafx.scene.text.Text;
 
 public class InicioController implements Initializable{
 
@@ -23,7 +22,7 @@ public class InicioController implements Initializable{
     @FXML
     private void clickEnEmpieza(ActionEvent event) {
         try {
-            App.setRoot("animalUnico");
+            App.setRoot("preguntas");
         } catch (IOException ex) {
             ex.printStackTrace();
         }
