@@ -16,6 +16,7 @@ import java.util.Map;
 import ec.edu.espol.proyectoed.p.modelo.AnimalInfo;
 import ec.edu.espol.proyectoed.p.modelo.BinaryTree;
 import ec.edu.espol.proyectoed.p.util.FileReaderUtil;
+import java.io.*;
 
 /**
  * JavaFX App
@@ -33,7 +34,7 @@ public class App extends Application {
         System.out.println(respuestas);
         BinaryTree<String> arbol = new BinaryTree<>();
         arbol.crearArbol(preguntas, respuestas);
-        playMusic("/music/musicaDonkey.mp3");
+        playMusic("src/main/resources/music/musicaDonkey.mp3");
         // Especifica la ruta completa del archivo FXML con su extensión
         scene = new Scene(loadFXML("fxml/inicio.fxml"), 1000, 560);
         stage.setScene(scene);
@@ -60,17 +61,14 @@ public class App extends Application {
         launch();
     }
 
-     public static void playMusic(String resourcePath) {
+     public static void playMusic(String path) {
         try {
-            // Utiliza getResource para cargar la ruta relativa del archivo de música
-            URL resourceURL = App.class.getClassLoader().getResource(resourcePath);
-            if (resourceURL == null) {
-                System.out.println("El archivo de música no se encontró: " + resourcePath);
-                return;
-            }
-
-            Media media = new Media(resourceURL.toString());
+            File musicF = new File(path);
+            String musicP =musicF.toURI().toString();
+            Media media = new Media(musicP);
             mediaPlayer = new MediaPlayer(media);
+            mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+            mediaPlayer.setVolume(0.5);
             mediaPlayer.play(); // Inicia la reproducción automáticamente
         } catch (Exception e) {
             System.out.println("Error al reproducir la música: " + e.getMessage());
