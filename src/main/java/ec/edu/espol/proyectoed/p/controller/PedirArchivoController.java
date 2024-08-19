@@ -68,7 +68,6 @@ public class PedirArchivoController implements Initializable {
         // Copiar el archivo al destino
         try {
             Files.copy(file.toPath(), destinationFilePath);
-            lblSubido.setText("Archivo guardado en: " + destinationFilePath.toString());
         } catch (IOException e) {
             e.printStackTrace();
             lblSubido.setText("Error al guardar el archivo.");
