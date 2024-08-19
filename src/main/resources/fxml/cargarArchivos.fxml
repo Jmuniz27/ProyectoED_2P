@@ -2,13 +2,42 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectoed.p.controller.CargarArchivosController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectoed.p.controller.CargarArchivosController">
    <children>
-      <Button fx:id="btnCargarPreguntas" mnemonicParsing="false" onAction="#handleCargarPreguntas" text="Preguntas" />
-      <Button fx:id="btnCargarRespuestas" mnemonicParsing="false" onAction="#handleCargarRespuestas" text="Respuestas" />
-      <Button fx:id="btnConfirmar" mnemonicParsing="false" onAction="#handleConfirmar" text="Confirmar" />
-      <Label fx:id="lblResultado" />
+      <AnchorPane prefHeight="566.0" prefWidth="1000.0">
+         <children>
+            <ImageView fx:id="idImagen" fitHeight="566.0" fitWidth="1055.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/cargarArchivo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnCargarPreguntas" layoutX="613.0" layoutY="376.0" mnemonicParsing="false" onAction="#handleCargarPreguntas" prefHeight="67.0" prefWidth="232.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: #e9dda3; -fx-border-color: #5a3420;" text="Preguntas" textFill="#5a3420">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCargarRespuestas" layoutX="613.0" layoutY="283.0" mnemonicParsing="false" onAction="#handleCargarRespuestas" prefHeight="67.0" prefWidth="232.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #e9dda3; -fx-border-color: #5a3420;" text="Respuestas" textFill="#5a3420">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnConfirmar" layoutX="613.0" layoutY="181.0" mnemonicParsing="false" onAction="#handleConfirmar" prefHeight="67.0" prefWidth="232.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #e9dda3; -fx-border-color: #5a3420;" text="Confirmar" textFill="#5a3420">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblResultado" layoutX="36.0" layoutY="148.0" prefHeight="17.0" prefWidth="498.0" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </VBox>
