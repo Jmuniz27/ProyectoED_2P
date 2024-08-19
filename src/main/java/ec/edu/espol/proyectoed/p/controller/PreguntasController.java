@@ -84,7 +84,7 @@ public class PreguntasController implements Initializable{
             } else {
                 tree = FileReaderUtil.recorrerArbol(tree, resp);
             }
-            }
+        }
         //termino de preguntar
         mostrarAnimal();
         }
