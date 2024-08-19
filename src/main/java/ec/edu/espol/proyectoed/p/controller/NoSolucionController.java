@@ -12,6 +12,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import java.io.IOException;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseDragEvent;
 
 /**
@@ -23,6 +25,8 @@ public class NoSolucionController implements Initializable {
 
     @FXML
     private Button btnVolver;
+    @FXML
+    private ImageView ivFondo;
 
     /**
      * Initializes the controller class.
@@ -30,7 +34,7 @@ public class NoSolucionController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        ivFondo.setImage(new Image("/imagenes/noSolucion.png"));
     }    
 
     @FXML
