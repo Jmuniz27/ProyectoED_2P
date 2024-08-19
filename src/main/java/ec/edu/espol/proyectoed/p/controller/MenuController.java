@@ -12,17 +12,18 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseDragEvent;
 
-public class InicioController implements Initializable{
+public class MenuController implements Initializable{
 
-    @FXML
-    private Button btnEmpieza;
     @FXML
     private ImageView ivFondo;
-
     @FXML
+    private Button btnArchivo;
+    @FXML
+    private Button btnJugar;
+
     private void clickEnEmpieza(ActionEvent event) {
         try {
-            App.setRoot("menu");
+            App.setRoot("preguntas");
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -35,6 +36,24 @@ public class InicioController implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ivFondo.setImage(new Image("/imagenes/inicio.png"));
+    }
+
+    @FXML
+    private void clickSubArchivo(ActionEvent event) {
+        try {
+            App.setRoot("cargarArchivos");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void clickJugar(ActionEvent event) {
+        try {
+            App.setRoot("preguntas");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 
 }

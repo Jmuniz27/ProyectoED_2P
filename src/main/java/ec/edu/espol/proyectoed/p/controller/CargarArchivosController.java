@@ -43,7 +43,7 @@ public class CargarArchivosController implements Initializable {
     @FXML
     private Label lblResultado;
 
-    private static final String CARPETA_RESOURCES = "src/main/resources/files";
+    private static final String CARPETA_RESOURCES = "src/main/resources/files/";
 
     private File archivoPreguntas;
     private File archivoRespuestas;
