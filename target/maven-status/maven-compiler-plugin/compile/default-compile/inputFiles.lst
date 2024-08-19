@@ -3,6 +3,7 @@
 /Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/modelo/AnimalInfo.java
 /Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/controller/PrimaryController.java
 /Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/controller/PreguntaController.java
+/Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/controller/PedirArchivoController.java
 /Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/App.java
 /Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/SecondaryController.java
 /Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/modelo/NodeBinaryTree.java
@@ -15,4 +16,3 @@
 /Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/controller/AnimalUnicoController.java
 /Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/module-info.java
 /Users/isabella/Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI - 2024/Estructuras de Datos/Segundo Parcial/Oficial Proyecto/ProyectoED_2P/src/main/java/ec/edu/espol/proyectoed/p/modelo/BinaryTree.java
-

@@ -1,6 +1,7 @@
 ec/edu/espol/proyectoed/p/modelo/BinaryTree.class
 ec/edu/espol/proyectoed/p/controller/PlantillaAnimalController.class
 ec/edu/espol/proyectoed/p/controller/AnimalUnicoController.class
+ec/edu/espol/proyectoed/p/controller/PedirArchivoController.class
 ec/edu/espol/proyectoed/p/modelo/AnimalInfo.class
 ec/edu/espol/proyectoed/p/controller/PrimaryController.class
 ec/edu/espol/proyectoed/p/util/Util.class
