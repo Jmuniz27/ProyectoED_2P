@@ -16,6 +16,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -35,6 +37,8 @@ public class PreguntaController implements Initializable {
     private Button siBtn;
     @FXML
     private Button noBtn;
+    @FXML
+    private ImageView ivFondo;
 
     public void setPregunta(String pregunta) {
         lblPregunta.setText(pregunta);
@@ -63,7 +67,7 @@ public class PreguntaController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // TODO
+        ivFondo.setImage(new Image("imagenes/indiPre.png"));
     } 
 
     // @FXML
