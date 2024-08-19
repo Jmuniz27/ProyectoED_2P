@@ -35,7 +35,7 @@ public class App extends Application {
         arbol.crearArbol(preguntas, respuestas);
 
         // Especifica la ruta completa del archivo FXML con su extensión
-        scene = new Scene(loadFXML("fxml/inicio.fxml"), 1000, 560);
+        scene = new Scene(loadFXML("fxml/cargarArchivos.fxml"), 1000, 560);
         stage.setScene(scene);
         stage.show();
     }
