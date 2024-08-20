@@ -17,6 +17,7 @@ import ec.edu.espol.proyectoed.p.modelo.AnimalInfo;
 import ec.edu.espol.proyectoed.p.modelo.BinaryTree;
 import ec.edu.espol.proyectoed.p.util.FileReaderUtil;
 import java.io.*;
+import javafx.scene.image.Image;
 
 /**
  * JavaFX App
@@ -34,6 +35,9 @@ public class App extends Application {
         scene = new Scene(loadFXML("fxml/inicio.fxml"), 1000, 560);
         stage.setScene(scene);
         stage.show();
+        Image icon = new Image(getClass().getResourceAsStream("/imagenes/zooLogo.png"));
+        // Asignar el ícono al Stage
+        stage.getIcons().add(icon);
     }
 
     public static void setRoot(String fxml) throws IOException {
