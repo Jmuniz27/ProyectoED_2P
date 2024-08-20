@@ -2,7 +2,6 @@ ec/edu/espol/proyectoed/p/controller/CargarArchivosController.class
 ec/edu/espol/proyectoed/p/modelo/FilePair.class
 ec/edu/espol/proyectoed/p/util/FileReaderUtil.class
 ec/edu/espol/proyectoed/p/controller/ReutilizarController.class
-ec/edu/espol/proyectoed/p/controller/MenuController.class
 ec/edu/espol/proyectoed/p/controller/PreguntaController.class
 ec/edu/espol/proyectoed/p/controller/ListaAnimalesController.class
 ec/edu/espol/proyectoed/p/controller/NoSolucionController.class

@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>ec.edu.espol</groupId>
-    <artifactId>ProyectoED-2P</artifactId>
+    <artifactId>ED_P1_Grupo01</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -75,4 +75,5 @@
             </plugin>
         </plugins>
     </build>
+    <name>ED_P1_Grupo01</name>
 </project>

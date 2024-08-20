@@ -87,7 +87,11 @@ public class PreguntasController implements Initializable{
             }
         }
         //termino de preguntar
-        mostrarAnimal();
+        if(tree == null){
+            mostrarNoSolucion();
+        }else{
+            mostrarAnimal();
+        }
         }
 
     private void mostrarAnimal() {
