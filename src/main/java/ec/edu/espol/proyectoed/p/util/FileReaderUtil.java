@@ -16,9 +16,9 @@ import java.util.regex.Pattern;
 import ec.edu.espol.proyectoed.p.modelo.BinaryTree;
 
 public class FileReaderUtil {
-    public static List<String> preguntas = readFile("src/main/resources/files/preguntas.txt");
-    public static Map<String, List<String>> respuestas = readAnswers("src/main/resources/files/respuestas.txt");
-    public static BinaryTree<String> arbolDecision = new BinaryTree<>(preguntas, respuestas);
+    public static List<String> preguntas;
+    public static Map<String, List<String>> respuestas ;
+    public static BinaryTree<String> arbolDecision;
     
     public static void escogerArchivo(String preguntasPath, String respuestasPath){
         preguntas = readFile(preguntasPath);
