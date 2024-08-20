@@ -48,9 +48,9 @@ public class AnimalUnicoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ivFondo.setImage(new Image("/imagenes/respuesta.png"));
-        ivFotoAnimal.setFitWidth(175); 
-        ivFotoAnimal.setFitHeight(198);
-        ivFotoAnimal.setSmooth(true);  // Suaviza la imagen al redimensionarla
+        ivFotoAnimal.setFitWidth(170); 
+        ivFotoAnimal.setFitHeight(170);
+        ivFotoAnimal.setSmooth(true);
         ivFotoAnimal.setCache(true); 
         ivFotoAnimal.setPreserveRatio(false);
         ivFotoAnimal.setImage(new Image(aniInfo.getAnimalImg()));

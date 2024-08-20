@@ -4,6 +4,7 @@
  */
 package ec.edu.espol.proyectoed.p.controller;
 
+import static ec.edu.espol.proyectoed.p.controller.AnimalUnicoController.aniInfo;
 import ec.edu.espol.proyectoed.p.modelo.AnimalInfo;
 import java.io.IOException;
 import java.net.URL;
@@ -36,7 +37,11 @@ public class PlantillaAnimalController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        ivAni1.setFitWidth(150); 
+        ivAni1.setFitHeight(150);
+        ivAni1.setSmooth(true); 
+        ivAni1.setCache(true); 
+        ivAni1.setPreserveRatio(false);
     }    
     
     
