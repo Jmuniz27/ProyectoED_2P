@@ -28,6 +28,8 @@ public class ReutilizarController implements Initializable {
     private Button btnJugar;
     @FXML
     private ComboBox<FilePair> cbArchivos; // Ahora ComboBox<FilePair>
+    @FXML
+    private Button btnVolver;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -87,5 +89,14 @@ public class ReutilizarController implements Initializable {
             }
         }
         return options;
+    }
+
+    @FXML
+    private void clickEnVolver(ActionEvent event) {
+        try {
+            App.setRoot("opcion");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 }

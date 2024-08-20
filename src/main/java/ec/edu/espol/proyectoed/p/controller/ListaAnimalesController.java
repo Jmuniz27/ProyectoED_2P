@@ -126,13 +126,9 @@ public class ListaAnimalesController implements Initializable {
                 VBox animalBox = plantillaAnimal(animal);
                 animalBox.setOnMouseClicked((MouseEvent event) -> {
                     // Mostrar la ventana de un solo animal
-                    AnimalUnicoController.aniInfo = animal;
+                    AnimalUnicoListaController.aniInfo = animal;
                     try {
-                        App.setRoot("animalUnico");
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/animalUnico.fxml"));
-                        AnchorPane an = loader.load();
-                        Button btn = (Button) an.lookup("#btnRegresar");
-                        btn.setVisible(true);
+                        App.setRoot("animalUnicoLista");
                         
                     } catch (IOException e) {
                         e.printStackTrace();

@@ -32,6 +32,18 @@
                   </DropShadow>
                </effect>
             </Button>
+            <Button fx:id="btnVolver" layoutX="40.0" layoutY="41.0" mnemonicParsing="false" onAction="#clickEnVolver" prefHeight="50.0" prefWidth="119.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: #e9dda3; -fx-border-color: #5a3420;" text="Volver" textFill="#5a3420">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.3529411852359772" green="0.20392157137393951" blue="0.125490203499794" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
             <ImageView fitHeight="211.0" fitWidth="202.0" layoutX="599.0" layoutY="-36.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagenes/rio-bird.gif" />

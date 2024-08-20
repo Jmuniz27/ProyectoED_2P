@@ -4,9 +4,21 @@
  */
 package ec.edu.espol.proyectoed.p.controller;
 
+import ec.edu.espol.proyectoed.p.App;
+import static ec.edu.espol.proyectoed.p.controller.AnimalUnicoController.aniInfo;
+import ec.edu.espol.proyectoed.p.modelo.AnimalInfo;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseDragEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -15,12 +27,54 @@ import javafx.fxml.Initializable;
  */
 public class AnimalUnicoListaController implements Initializable {
 
+    @FXML
+    private ImageView ivFondo;
+    @FXML
+    private Text txtNombreAnimal;
+    @FXML
+    private ImageView ivFotoAnimal;
+    @FXML
+    private Text txtDescripcion;
+    @FXML
+    private HBox hboxBtns;
+    @FXML
+    private Button btnVolver;
+    @FXML
+    private Button btnRegresar;
+    public static AnimalInfo aniInfo;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        ivFondo.setImage(new Image("/imagenes/respuesta.png"));
+        ivFotoAnimal.setFitWidth(175); 
+        ivFotoAnimal.setFitHeight(198);
+        ivFotoAnimal.setSmooth(true);  // Suaviza la imagen al redimensionarla
+        ivFotoAnimal.setCache(true); 
+        ivFotoAnimal.setPreserveRatio(false);
+        ivFotoAnimal.setImage(new Image(aniInfo.getAnimalImg()));
+        txtNombreAnimal.setText(aniInfo.getAnimalName());
+        txtDescripcion.setText(aniInfo.getAnimalDecs());
     }    
+
+
+    @FXML
+    private void mouseEnBoton(MouseDragEvent event) {
+    }
+
+    @FXML
+    private void clickRegresar(ActionEvent event) {
+    }
+
+    @FXML
+    private void volverLista(ActionEvent event) {
+        try {
+            App.setRoot("listaAnimales");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
     
 }
