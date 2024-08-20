@@ -29,11 +29,6 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        List<String> preguntas = FileReaderUtil.preguntas;
-        Map<String, List<String>> respuestas = FileReaderUtil.respuestas;
-        System.out.println(respuestas);
-        BinaryTree<String> arbol = new BinaryTree<>();
-        arbol.crearArbol(preguntas, respuestas);
         playMusic("src/main/resources/music/musicaDonkey.mp3");
         // Especifica la ruta completa del archivo FXML con su extensión
         scene = new Scene(loadFXML("fxml/inicio.fxml"), 1000, 560);
