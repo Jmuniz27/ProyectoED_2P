@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectoed.p.controller.ReutilizarController">
+   <center>
+      <AnchorPane prefHeight="560.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="ivFondo" fitHeight="567.0" fitWidth="1004.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOI%20-%202024/Estructuras%20de%20Datos/Segundo%20Parcial/Oficial%20Proyecto/ProyectoED_2P/src/main/resources/imagenes/reutilizar.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnJugar" layoutX="311.0" layoutY="316.0" mnemonicParsing="false" onAction="#clickEnJugar" onMouseDragOver="#mouseEnBoton" prefHeight="54.0" prefWidth="144.0" style="-fx-background-color: #e69e43; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #5a3420;" text="Jugar" textAlignment="CENTER" textFill="#5a3420">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.6078431606292725" green="0.40392157435417175" blue="0.21176470816135406" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <ImageView fitHeight="211.0" fitWidth="202.0" layoutX="599.0" layoutY="-36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/rio-bird.gif" />
+               </image>
+            </ImageView>
+            <Text fill="#5a3420" layoutX="129.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Escoge un archivo para jugar">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="36.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="cbArchivos" layoutX="215.0" layoutY="224.0" prefHeight="54.0" prefWidth="327.0" style="-fx-background-color: #e9dda3; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #5a3420;">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.3529411852359772" green="0.20392157137393951" blue="0.125490203499794" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ComboBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
