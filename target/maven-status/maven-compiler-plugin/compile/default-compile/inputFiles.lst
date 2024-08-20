@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\creditos gonzalez\Documents\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\modelo\FilePair.java
 C:\Users\creditos gonzalez\Documents\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\CargarArchivosController.java
 C:\Users\creditos gonzalez\Documents\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\NoSolucionController.java
@@ -21,3 +22,27 @@ C:\Users\creditos gonzalez\Documents\ProyectoED_2P\src\main\java\ec\edu\espol\pr
 C:\Users\creditos gonzalez\Documents\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\MenuController.java
 C:\Users\creditos gonzalez\Documents\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\PrimaryController.java
 C:\Users\creditos gonzalez\Documents\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\SecondaryController.java
+=======
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\modelo\BinaryTree.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\modelo\AnimalInfo.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\AnimalUnicoListaController.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\CargarArchivosController.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\ReutilizarController.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\InicioController.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\SecondaryController.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\modelo\FilePair.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\util\FileReaderUtil.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\AnimalUnicoController.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\ListaAnimalesController.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\NoSolucionController.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\PrimaryController.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\OpcionController.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\PlantillaAnimalController.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\module-info.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\PreguntasController.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\App.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\util\Util.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\modelo\Pregunta.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\controller\PreguntaController.java
+c:\Users\jmuni\OneDrive - Escuela Superior Politécnica del Litoral\3 Semestre\ED\Proyecto 2P\ProyectoED_2P\src\main\java\ec\edu\espol\proyectoed\p\modelo\NodeBinaryTree.java
+>>>>>>> de6d4725e2eb0a986de0827efe107ee12856be5c

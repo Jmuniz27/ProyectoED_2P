@@ -19,5 +19,4 @@ ec\edu\espol\proyectoed\p\modelo\BinaryTree.class
 ec\edu\espol\proyectoed\p\controller\NoSolucionController.class
 module-info.class
 ec\edu\espol\proyectoed\p\controller\AnimalUnicoController.class
-ec\edu\espol\proyectoed\p\controller\MenuController.class
 ec\edu\espol\proyectoed\p\modelo\Pregunta.class

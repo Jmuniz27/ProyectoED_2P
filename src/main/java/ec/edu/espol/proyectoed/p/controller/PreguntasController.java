@@ -106,10 +106,6 @@ public class PreguntasController implements Initializable{
             }
         }else{
             //mostrar ventana de lista de animales
-            System.out.println("Animales: ");
-            for(NodeBinaryTree<String> sol : soluciones){
-                System.out.println(sol.getContent());
-            }
             for(NodeBinaryTree<String> sol : soluciones){
                 AnimalInfo animal = new AnimalInfo(sol.getContent());
                 animales.add(animal);

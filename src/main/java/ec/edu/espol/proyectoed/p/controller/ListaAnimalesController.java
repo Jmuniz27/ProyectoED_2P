@@ -16,6 +16,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Cursor;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -125,6 +126,7 @@ public class ListaAnimalesController implements Initializable {
             if (startIndex + i < animales.size()) {
                 AnimalInfo animal = animales.get(startIndex + i);
                 VBox animalBox = plantillaAnimal(animal);
+                animalBox.setCursor(Cursor.HAND);
                 animalBox.setOnMouseClicked((MouseEvent event) -> {
                     // Mostrar la ventana de un solo animal
                     AnimalUnicoListaController.aniInfo = animal;
