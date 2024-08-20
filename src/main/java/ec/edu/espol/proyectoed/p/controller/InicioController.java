@@ -18,11 +18,13 @@ public class InicioController implements Initializable{
     private Button btnEmpieza;
     @FXML
     private ImageView ivFondo;
+    @FXML
+    private ImageView ivPajaro;
 
     @FXML
     private void clickEnEmpieza(ActionEvent event) {
         try {
-            App.setRoot("preguntas");
+            App.setRoot("opcion");
         } catch (IOException ex) {
             ex.printStackTrace();
         }

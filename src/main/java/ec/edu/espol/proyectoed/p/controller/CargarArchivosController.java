@@ -4,6 +4,8 @@
  */
 package ec.edu.espol.proyectoed.p.controller;
 
+import ec.edu.espol.proyectoed.p.App;
+import ec.edu.espol.proyectoed.p.util.FileReaderUtil;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -21,6 +23,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -43,12 +47,16 @@ public class CargarArchivosController implements Initializable {
     @FXML
     private Label lblResultado;
 
-    private static final String CARPETA_RESOURCES = "src/main/resources/files";
+    private static final String CARPETA_RESOURCES = "src/main/resources/files/";
 
     private File archivoPreguntas;
     private File archivoRespuestas;
     private String nombrePreguntas;
     private String nombreRespuestas;
+    @FXML
+    private ImageView idImagen;
+    @FXML
+    private Button btnVolver;
 
     @FXML
     private void handleCargarPreguntas() {
@@ -71,14 +79,22 @@ public class CargarArchivosController implements Initializable {
     @FXML
     private void handleConfirmar() {
         if (archivoPreguntas != null && archivoRespuestas != null) {
-            guardarArchivoEnResources(archivoPreguntas, nombrePreguntas);
-            guardarArchivoEnResources(archivoRespuestas, nombreRespuestas);
+            String pathPre = guardarArchivoEnResources(archivoPreguntas, nombrePreguntas);
+            String pathRes = guardarArchivoEnResources(archivoRespuestas, nombreRespuestas);
             lblResultado.setText("Archivos guardados correctamente:\n" +
                                  "Preguntas: " + nombrePreguntas + "\n" +
                                  "Respuestas: " + nombreRespuestas);
+            FileReaderUtil.escogerArchivo(pathPre, pathRes);
+            try {
+                App.setRoot("preguntas");
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
         } else {
             lblResultado.setText("Debe cargar ambos archivos antes de confirmar.");
         }
+        
+        
     }
 
     private File cargarArchivo(String titulo) {
@@ -131,17 +147,28 @@ public class CargarArchivosController implements Initializable {
         return tipoArchivo + (maxNumero + 1) + ".txt";
     }
 
-    private void guardarArchivoEnResources(File archivo, String nombreDestino) {
+    private String guardarArchivoEnResources(File archivo, String nombreDestino) {
+        Path destino = null;
         try {
-            Path destino = Path.of(CARPETA_RESOURCES + nombreDestino);
+            destino = Path.of(CARPETA_RESOURCES + nombreDestino);
             Files.copy(archivo.toPath(), destino, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return destino.toString();
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // TODO Auto-generated method stub
+        idImagen.setImage(new Image("/imagenes/cargarArchivo.png"));
+    }
+
+    @FXML
+    private void clickEnVolver(ActionEvent event) {
+        try {
+            App.setRoot("opcion");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 }

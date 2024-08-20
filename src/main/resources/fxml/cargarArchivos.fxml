@@ -27,16 +27,21 @@
                   <Font name="Arial Rounded MT Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnConfirmar" layoutX="612.0" layoutY="374.0" mnemonicParsing="false" onAction="#handleConfirmar" prefHeight="67.0" prefWidth="232.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #e9dda3; -fx-border-color: #5a3420;" text="Confirmar" textFill="#5a3420">
+            <Button fx:id="btnConfirmar" layoutX="612.0" layoutY="374.0" mnemonicParsing="false" onAction="#handleConfirmar" prefHeight="67.0" prefWidth="232.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #e9dda3; -fx-border-color: #5a3420;" text="Jugar" textFill="#5a3420">
                <font>
                   <Font name="Arial Rounded MT Bold" size="18.0" />
                </font>
             </Button>
-            <Label fx:id="lblResultado" layoutX="36.0" layoutY="148.0" prefHeight="17.0" prefWidth="498.0" textAlignment="CENTER">
+            <Label fx:id="lblResultado" alignment="CENTER" layoutX="60.0" layoutY="124.0" prefHeight="74.0" prefWidth="460.0" text="Carga tus archivos de preguntas y de respuestas." wrapText="true">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="28.0" />
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
                </font>
             </Label>
+            <Button fx:id="btnVolver" layoutX="40.0" layoutY="41.0" mnemonicParsing="false" onAction="#clickEnVolver" prefHeight="50.0" prefWidth="119.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: #e9dda3; -fx-border-color: #5a3420;" text="Volver" textFill="#5a3420">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>

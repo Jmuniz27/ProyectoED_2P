@@ -6,6 +6,7 @@ import javafx.scene.Node;
 
 import java.util.List;
 import java.util.Map;
+import javafx.scene.control.Alert;
 
 public class Util {
     
@@ -40,6 +41,14 @@ public class Util {
         }
 
         return node;
+    }
+    
+    public static void mostrarAlerta(String titulo, String mensaje) {
+        Alert alerta = new Alert(Alert.AlertType.ERROR);
+        alerta.setTitle(titulo);
+        alerta.setHeaderText(null);
+        alerta.setContentText(mensaje);
+        alerta.showAndWait();
     }
 
 

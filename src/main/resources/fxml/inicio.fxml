@@ -9,7 +9,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectoed.p.controller.InicioController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectoed.p.controller.InicioController">
    <center>
       <AnchorPane prefHeight="560.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
          <children>
@@ -30,7 +30,7 @@
                   </DropShadow>
                </effect>
             </Button>
-            <ImageView fitHeight="211.0" fitWidth="202.0" layoutX="599.0" layoutY="-36.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="ivPajaro" fitHeight="211.0" fitWidth="202.0" layoutX="769.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagenes/rio-bird.gif" />
                </image>

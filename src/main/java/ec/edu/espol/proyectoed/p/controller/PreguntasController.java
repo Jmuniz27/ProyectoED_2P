@@ -12,6 +12,7 @@ import ec.edu.espol.proyectoed.p.modelo.AnimalInfo;
 import ec.edu.espol.proyectoed.p.modelo.BinaryTree;
 import ec.edu.espol.proyectoed.p.modelo.NodeBinaryTree;
 import ec.edu.espol.proyectoed.p.util.FileReaderUtil;
+import ec.edu.espol.proyectoed.p.util.Util;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -55,14 +56,14 @@ public class PreguntasController implements Initializable{
     void btnEmpezar(ActionEvent event) {
         String entrada = nPreguntasTF.getText();
         if(entrada.isEmpty()){
-            mostrarAlerta("Error", "No hay contenido en el cuadro de texto");
+            Util.mostrarAlerta("Error", "No hay contenido en el cuadro de texto");
         }else{
             numPreguntas = Integer.parseInt(entrada);
             //hay que verificar si esta entre el rango de preguntas que permite el arbol
             if(preguntasDentroRango(numPreguntas,preguntasArchivo)){
                 mostrarVentanasPreguntas();
             }else{
-                mostrarAlerta("Error", "El número de preguntas no está en el rango permitido");
+                Util.mostrarAlerta("Error", "El número de preguntas no está en el rango permitido");
             }
         }
     }
@@ -170,12 +171,6 @@ public class PreguntasController implements Initializable{
         });
     }
 
-    private void mostrarAlerta(String titulo, String mensaje) {
-        Alert alerta = new Alert(AlertType.ERROR);
-        alerta.setTitle(titulo);
-        alerta.setHeaderText(null);
-        alerta.setContentText(mensaje);
-        alerta.showAndWait();
-    }
+    
 
 }
