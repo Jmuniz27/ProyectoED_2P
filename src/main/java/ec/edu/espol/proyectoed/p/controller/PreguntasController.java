@@ -56,7 +56,7 @@ public class PreguntasController implements Initializable{
     void btnEmpezar(ActionEvent event) {
         String entrada = nPreguntasTF.getText();
         if(entrada.isEmpty()){
-            Util.mostrarAlerta("Error", "No hay contenido en el cuadro de texto");
+            Util.mostrarAlerta("Error", "No hay contenido en el cuadro de texto. Por favor ingrese un número de preguntas en el rango permitido: [0," + preguntasArchivo + "]");
         }else{
             numPreguntas = Integer.parseInt(entrada);
             //hay que verificar si esta entre el rango de preguntas que permite el arbol
