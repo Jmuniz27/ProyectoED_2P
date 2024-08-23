@@ -24,6 +24,57 @@ public class BinaryTree<E extends Comparable<E>> {
     public BinaryTree(E content) {
         this.root = new NodeBinaryTree<>(content);
     }
+    public void crearArbol(List<E> preguntas, Map<E, List<String>> animales){
+        for(Map.Entry<E, List<String>> entry: animales.entrySet()){
+            root = addNode(root, preguntas, entry.getKey(), entry.getValue(), 0);
+
+        }
+    } 
+    
+    private NodeBinaryTree<E> addNode(NodeBinaryTree<E> nodo, List<E> preguntas, E contenido, List<String> respuestas, int indice){
+        if (indice == preguntas.size()){
+            return new NodeBinaryTree<>(contenido);
+        }
+        if (nodo == null){
+            nodo = new NodeBinaryTree<>(preguntas.get(indice));
+        }
+        if (respuestas.get(indice).equalsIgnoreCase("si")) {
+            if (nodo.getLeft() == null) {
+                nodo.setLeft(new BinaryTree<>());
+            }
+            NodeBinaryTree<E> leftRoot = addNode(nodo.getLeft().getRoot(), preguntas, contenido, respuestas, indice + 1);
+            nodo.getLeft().setRoot(leftRoot);
+        } else {
+            if (nodo.getRight() == null) {
+                nodo.setRight(new BinaryTree<>());
+            }
+            NodeBinaryTree<E> rightRoot = addNode(nodo.getRight().getRoot(), preguntas, contenido, respuestas, indice + 1);
+            nodo.getRight().setRoot(rightRoot);
+        }
+        return nodo;
+    }
+    
+    public List<NodeBinaryTree<E>> getLeaves() {
+        List<NodeBinaryTree<E>> leaves = new ArrayList<>();
+        collectLeaves(this.root, leaves);
+        return leaves;
+    }
+    
+    private void collectLeaves(NodeBinaryTree<E> node, List<NodeBinaryTree<E>> leaves) {
+        if (node == null) {
+            return;
+        }
+        if (node.getLeft() == null && node.getRight() == null) {
+            leaves.add(node);
+        } else {
+            if (node.getLeft() != null) {
+                collectLeaves(node.getLeft().getRoot(), leaves);
+            }
+            if (node.getRight() != null) {
+                collectLeaves(node.getRight().getRoot(), leaves);
+            }
+        }
+    }
     
     public void recorrerPreOrden(){
         if (!this.isEmpty()) {
@@ -400,56 +451,8 @@ public class BinaryTree<E extends Comparable<E>> {
         }
         return true;
     }
-    public List<NodeBinaryTree<E>> getLeaves() {
-        List<NodeBinaryTree<E>> leaves = new ArrayList<>();
-        collectLeaves(this.root, leaves);
-        return leaves;
-    }
     
-    private void collectLeaves(NodeBinaryTree<E> node, List<NodeBinaryTree<E>> leaves) {
-        if (node == null) {
-            return;
-        }
-        if (node.getLeft() == null && node.getRight() == null) {
-            leaves.add(node);
-        } else {
-            if (node.getLeft() != null) {
-                collectLeaves(node.getLeft().getRoot(), leaves);
-            }
-            if (node.getRight() != null) {
-                collectLeaves(node.getRight().getRoot(), leaves);
-            }
-        }
-    }
     
-    public void crearArbol(List<E> preguntas, Map<E, List<String>> animales){
-        for(Map.Entry<E, List<String>> entry: animales.entrySet()){
-            root = addNode(root, preguntas, entry.getKey(), entry.getValue(), 0);
-
-        }
-    } 
-    private NodeBinaryTree<E> addNode(NodeBinaryTree<E> nodo, List<E> preguntas, E contenido, List<String> respuestas, int indice){
-        if (indice == preguntas.size()){
-            return new NodeBinaryTree<>(contenido);
-        }
-        if (nodo == null){
-            nodo = new NodeBinaryTree<>(preguntas.get(indice));
-        }
-        if (respuestas.get(indice).equalsIgnoreCase("si")) {
-            if (nodo.getLeft() == null) {
-                nodo.setLeft(new BinaryTree<>());
-            }
-            NodeBinaryTree<E> leftRoot = addNode(nodo.getLeft().getRoot(), preguntas, contenido, respuestas, indice + 1);
-            nodo.getLeft().setRoot(leftRoot);
-        } else {
-            if (nodo.getRight() == null) {
-                nodo.setRight(new BinaryTree<>());
-            }
-            NodeBinaryTree<E> rightRoot = addNode(nodo.getRight().getRoot(), preguntas, contenido, respuestas, indice + 1);
-            nodo.getRight().setRoot(rightRoot);
-        }
-        return nodo;
-    }
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

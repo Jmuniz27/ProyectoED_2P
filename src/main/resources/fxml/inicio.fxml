@@ -10,7 +10,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectoed.p.controller.InicioController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectoed.p.controller.InicioController">
    <center>
       <AnchorPane prefHeight="560.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
          <children>
@@ -19,7 +19,7 @@
                   <Image url="@../imagenes/inicio.png" />
                </image>
             </ImageView>
-            <Button fx:id="btnEmpieza" layoutX="388.0" layoutY="357.0" mnemonicParsing="false" onAction="#clickEnEmpieza" onMouseDragOver="#mouseEnBoton" prefHeight="58.0" prefWidth="243.0" style="-fx-background-color: #e69e43; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #5a3420;" text="Empieza a jugar" textAlignment="CENTER" textFill="#5a3420">
+            <Button fx:id="btnEmpieza" layoutX="382.0" layoutY="347.0" mnemonicParsing="false" onAction="#clickEnEmpieza" onMouseDragOver="#mouseEnBoton" prefHeight="58.0" prefWidth="243.0" style="-fx-background-color: #e69e43; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #5a3420;" text="Empieza a jugar" textAlignment="CENTER" textFill="#5a3420">
                <font>
                   <Font name="Arial Rounded MT Bold" size="18.0" />
                </font>

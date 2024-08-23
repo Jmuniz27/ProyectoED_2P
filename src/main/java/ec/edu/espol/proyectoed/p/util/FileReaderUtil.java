@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -51,7 +52,7 @@ public class FileReaderUtil {
                 
                 String[] parts = line.split(" ");
                 String animal = parts[0];
-                List<String> respuestas = new ArrayList<>();
+                List<String> respuestas = new LinkedList<>();
                 for (int i = 1; i < parts.length; i++) {
                     respuestas.add(parts[i]);
                 }

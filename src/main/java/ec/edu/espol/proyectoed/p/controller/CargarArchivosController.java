@@ -72,11 +72,15 @@ public class CargarArchivosController implements Initializable {
     @FXML
     private void handleCargarRespuestas() {
         archivoRespuestas = cargarArchivo("Seleccionar Archivo de Respuestas");
-        if (archivoRespuestas != null && verificarFormatoRespuestas(archivoRespuestas)) {
-            nombreRespuestas = generarNombreArchivo("respuestas");
-            lblResultado.setText(lblResultado.getText() + "\nArchivo de Respuestas: " + archivoRespuestas.getName() + " será guardado como: " + nombreRespuestas);
+        if(archivoPreguntas != null){
+            if (archivoRespuestas != null && verificarFormatoRespuestas(archivoRespuestas)) {
+                nombreRespuestas = generarNombreArchivo("respuestas");
+                lblResultado.setText(lblResultado.getText() + "\nArchivo de Respuestas: " + archivoRespuestas.getName() + " será guardado como: " + nombreRespuestas);
+            } else{
+                Util.mostrarAlerta("Error al cargar Archivo de Respuesta", "Formato Incorrecto del Archivo de Respuesta.");
+            }
         } else{
-            Util.mostrarAlerta("Error al cargar Archivo de Respuesta", "Formato Incorrecto del Archivo de Respuesta");
+            Util.mostrarAlerta("Error al cargar Archivo de Respuesta", "Por favor primero cargue el archivo de Preguntas.");
         }
     }
 
@@ -115,7 +119,7 @@ public class CargarArchivosController implements Initializable {
             List<String> lineas = Files.readAllLines(archivo.toPath());
             for (String linea : lineas) {
                 String[] partes = linea.split(" ");
-                if (partes.length != 21) { // El nombre del animal + 20 respuestas
+                if ((partes.length - 1) != FileReaderUtil.readFile(archivoPreguntas.toPath().toString()).size()) {
                     return false;
                 }
                 for (int i = 1; i < partes.length; i++) {
