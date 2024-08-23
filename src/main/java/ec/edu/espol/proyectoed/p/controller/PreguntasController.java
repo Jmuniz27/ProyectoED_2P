@@ -63,7 +63,7 @@ public class PreguntasController implements Initializable{
             if(preguntasDentroRango(numPreguntas,preguntasArchivo)){
                 mostrarVentanasPreguntas();
             }else{
-                Util.mostrarAlerta("Error", "El número de preguntas no está en el rango permitido");
+                Util.mostrarAlerta("Error", "El número de preguntas no está en el rango permitido: [0," + preguntasArchivo + "]");
             }
         }
     }
