@@ -26,7 +26,7 @@ public class FileReaderUtil {
         arbolDecision = new BinaryTree<>(preguntas, respuestas);
     }
     public static List<String> readFile(String filename) {
-        List<String> lines = new ArrayList<>();
+        List<String> lines = new LinkedList<>();
         try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(filename), StandardCharsets.UTF_8))) {
             System.out.println("Leyendo archivo: " + filename);
             String line;
