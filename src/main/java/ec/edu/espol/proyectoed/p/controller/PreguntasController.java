@@ -56,14 +56,14 @@ public class PreguntasController implements Initializable{
     void btnEmpezar(ActionEvent event) {
         String entrada = nPreguntasTF.getText();
         if(entrada.isEmpty()){
-            Util.mostrarAlerta("Error", "No hay contenido en el cuadro de texto");
+            Util.mostrarAlerta("Error", "No hay contenido en el cuadro de texto. Por favor ingrese un número de preguntas en el rango permitido: [0," + preguntasArchivo + "]");
         }else{
             numPreguntas = Integer.parseInt(entrada);
             //hay que verificar si esta entre el rango de preguntas que permite el arbol
             if(preguntasDentroRango(numPreguntas,preguntasArchivo)){
                 mostrarVentanasPreguntas();
             }else{
-                Util.mostrarAlerta("Error", "El número de preguntas no está en el rango permitido");
+                Util.mostrarAlerta("Error", "El número de preguntas no está en el rango permitido: [0," + preguntasArchivo + "]");
             }
         }
     }

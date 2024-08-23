@@ -6,6 +6,8 @@ package ec.edu.espol.proyectoed.p.controller;
 
 import ec.edu.espol.proyectoed.p.App;
 import ec.edu.espol.proyectoed.p.util.FileReaderUtil;
+import ec.edu.espol.proyectoed.p.util.Util;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -73,6 +75,8 @@ public class CargarArchivosController implements Initializable {
         if (archivoRespuestas != null && verificarFormatoRespuestas(archivoRespuestas)) {
             nombreRespuestas = generarNombreArchivo("respuestas");
             lblResultado.setText(lblResultado.getText() + "\nArchivo de Respuestas: " + archivoRespuestas.getName() + " será guardado como: " + nombreRespuestas);
+        } else{
+            Util.mostrarAlerta("Error al cargar Archivo de Respuesta", "Formato Incorrecto del Archivo de Respuesta");
         }
     }
 

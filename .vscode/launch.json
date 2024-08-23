@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "ec.edu.espol.proyectoed.p/ec.edu.espol.proyectoed.p.App",
+            "projectName": "ED_P1_Grupo01"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

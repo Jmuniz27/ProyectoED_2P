@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -73,22 +72,6 @@ public class FileReaderUtil {
 
     public static List<String> getQuestions() {
         return preguntas;
-    }
-
-    public static List<String> recorrerOpciones(BinaryTree<String> arbol){
-        List<String> respuestasUser = new LinkedList<>();
-        String respuestaAnimal;
-        while(!arbol.isLeaf()){
-            String respuestaIng = "algo";
-            respuestasUser.add(respuestaIng);
-            if(respuestaIng.equalsIgnoreCase("si")){
-                recorrerOpciones(arbol.getRoot().getRight());
-            }else{
-                recorrerOpciones(arbol.getRoot().getLeft());
-            }
-            respuestaAnimal = arbol.getRoot().getContent();
-        }
-        return respuestasUser;
     }
 
     public static BinaryTree<String> recorrerArbol(BinaryTree<String> arbol, String respo){
